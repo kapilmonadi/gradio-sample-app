@@ -1,0 +1,8 @@
+name: gradio_sample_app_venv
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - gradio
