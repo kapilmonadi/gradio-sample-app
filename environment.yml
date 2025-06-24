@@ -7,3 +7,7 @@ dependencies:
   - pip
   - pip:
     - gradio
+    - langchain
+    - langchain-core
+    - langchain-community
+    - langchain-ollama
