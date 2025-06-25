@@ -1,11 +1,19 @@
+import os
 import gradio as gr
 from langchain_ollama import ChatOllama
+from langchain_groq import ChatGroq
+from langchain.prompts import ChatPromptTemplate, HumanMessagePromptTemplate
 from langchain.globals import set_debug, set_verbose
+
 
 set_debug(True) # enable debugging in Langchain
 set_verbose(True)
 
-llm = ChatOllama(model="llama3.2")
+def getLlamaModel():
+    return ChatOllama(model="llama3.2")
+
+def getGroqModel():
+    return ChatGroq(model="mixtral-8x7b-32768")
 
 def sayHello(name: str):
     return f"Hello {name}"
